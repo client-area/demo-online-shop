@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VOGUE - Luxury Streetwear & Fashion</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Promo Bar -->
+    <div class="promo-bar">
+      GRATIS ONGKIR SELURUH INDONESIA UNTUK PEMBELIAN DI ATAS 500K!
+    </div>
+
+    <!-- Header -->
+    <header class="main-header" id="navbar">
+      <div class="container header-container">
+        <div
+          class="logo"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+        >
+          VOGUE<span>.</span>
+        </div>
+
+        <nav class="nav-links" id="navLinks">
+          <a href="#">BERANDA</a>
+          <a href="#about">TENTANG KAMI</a>
+          <a href="#products">KOLEKSI</a>
+          <a href="#contact">KONTAK</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="cart-icon-wrapper" onclick="toggleCart(true)">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span id="cart-badge">0</span>
+          </div>
+          <div class="menu-mobile-btn" onclick="toggleMobileMenu()">
+            <i class="fa-solid fa-bars-staggered"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-wrapper">
+        <div class="hero-content">
+          <span class="label-new">EDISI TERBATAS 2024</span>
+          <h1>Elegansi Dalam <br />Setiap Detail.</h1>
+          <p>
+            Temukan mahakarya fashion yang dirancang untuk kenyamanan maksimal
+            dan kepercayaan diri Anda setiap hari.
+          </p>
+          <div class="hero-actions">
+            <a href="#products" class="btn-primary">MULAI BELANJA</a>
+            <a href="#contact" class="btn-secondary">KONTAK KAMI</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="img-frame">
+            <img
+              src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800"
+              alt="Vogue Fashion"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="about section-height">
+      <div class="container about-wrapper">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800"
+            alt="Vogue Story"
+          />
+        </div>
+        <div class="about-text">
+          <h2 class="serif">Kualitas Premium dan Elegant</h2>
+          <p>
+            Kami percaya kualitas adalah prioritas utama dalam setiap produk
+            yang kami hadirkan. VOGUE bekerja sama dengan pengrajin lokal
+            terbaik untuk memastikan detail, ketahanan, dan estetika tetap
+            terjaga.Setiap produk dibuat dengan standar tinggi untuk memberikan
+            pengalaman terbaik bagi pelanggan.
+          </p>
+          <div class="stat-container">
+            <div class="stat-box">
+              <strong>50+</strong><span>Pelanggan</span>
+            </div>
+            <div class="stat-box">
+              <strong>150+</strong><span>Produk Terjual</span>
+            </div>
+            <div class="stat-box"><strong>5+</strong><span>Outlet</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="features section-height">
+      <div class="container features-grid">
+        <div class="f-item">
+          <i class="fa-solid fa-truck-fast"></i>
+          <h4>Pengiriman Cepat</h4>
+          <p>Layanan kilat ke seluruh Indonesia.</p>
+        </div>
+        <div class="f-item">
+          <i class="fa-solid fa-gem"></i>
+          <h4>Kualitas Premium</h4>
+          <p>Bahan pilihan dengan jahitan rapi.</p>
+        </div>
+        <div class="f-item">
+          <i class="fa-solid fa-rotate-left"></i>
+          <h4>Garansi Retur</h4>
+          <p>7 Hari garansi tukar ukuran.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section id="products" class="shop-section">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="serif">Pilihan Terbaik Untukmu</h2>
+        </div>
+        <div class="filter-group-wr">
+            <div class="filter-group">
+              <button class="filter-tab active" data-filter="all">Semua</button>
+              <button class="filter-tab" data-filter="baju">Atasan</button>
+              <button class="filter-tab" data-filter="celana">Bawahan</button>
+              <button class="filter-tab" data-filter="aksesoris">
+                Aksesori
+              </button>
+            </div>
+          </div>
+        <div class="product-grid" id="productGrid">
+          <!-- Data Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-vogue section-height">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="serif">Mari Terhubung</h2>
+          <p>
+            Temukan koleksi terbaru dan inspirasi harian di media sosial kami.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <!-- WhatsApp -->
+          <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="contact-info">
+              <h4>WHATSAPP</h4>
+              <p>Konsultasi & Order Cepat</p>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/vogue"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="contact-info">
+              <h4>INSTAGRAM</h4>
+              <p>@vogue.luxury.store</p>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+          <!-- TikTok -->
+          <a
+            href="https://tiktok.com/@vogue"
+            target="_blank"
+            class="contact-card"
+          >
+            <div class="contact-icon"><i class="fa-brands fa-tiktok"></i></div>
+            <div class="contact-info">
+              <h4>TIKTOK</h4>
+              <p>Koleksi dalam Video</p>
+            </div>
+            <i class="fa-solid fa-arrow-right arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer-premium">
+      <div class="container">
+        <div class="footer-main-grid">
+          <!-- Column 1: Brand -->
+          <div class="footer-brand-info">
+            <div class="logo light">VOGUE<span>.</span></div>
+            <p class="brand-desc">
+              Mendefinisikan ulang kemewahan melalui fashion modern yang tak
+              lekang oleh waktu sejak 2024.
+            </p>
+            <div class="footer-social-circles">
+              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-links-col">
+            <h5>KOLEKSI</h5>
+            <ul>
+              <li><a href="#products">New Arrivals</a></li>
+              <li><a href="#products">Best Sellers</a></li>
+              <li><a href="#products">Edisi Terbatas</a></li>
+              <li><a href="#products">Aksesori</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Support -->
+          <div class="footer-links-col">
+            <h5>BANTUAN</h5>
+            <ul>
+              <li><a href="#">Lacak Pesanan</a></li>
+              <li><a href="#">Panduan Ukuran</a></li>
+              <li><a href="#">Kebijakan Retur</a></li>
+              <li><a href="#">Syarat & Ketentuan</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Newsletter -->
+          <div class="footer-newsletter-premium">
+            <h5>JOIN THE VOGUE SQUAD</h5>
+            <p>Dapatkan diskon 10% untuk pembelian pertama Anda.</p>
+            <form class="footer-form-premium">
+              <input type="email" placeholder="Alamat Email Anda" required />
+              <button type="submit">JOIN</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright -->
+        <div class="footer-bottom-premium">
+          <div class="bottom-flex">
+            <p>&copy; 2024 VOGUE LUXURY STORE. All Rights Reserved.</p>
+            <div class="payment-methods">
+              <i class="fa-brands fa-cc-visa"></i>
+              <i class="fa-brands fa-cc-mastercard"></i>
+              <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SHOPPING CART SIDEBAR -->
+    <div class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3>TAS BELANJA</h3>
+        <div class="close-cart" onclick="toggleCart(false)">&times;</div>
+      </div>
+
+      <div class="cart-body" id="cartContent">
+        <div class="empty-cart-msg">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <p>KERANJANG ANDA KOSONG</p>
+        </div>
+        <!-- Items rendered by JS -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="summary-row">
+          <span>ESTIMASI TOTAL</span>
+          <span id="cartTotalDisplay">Rp 0</span>
+        </div>
+        <p class="cart-info-text">
+          Pajak dan biaya kirim akan dihitung saat checkout.
+        </p>
+        <button class="btn-checkout" onclick="checkoutWhatsApp()">
+          LANJUT KE WHATSAPP
+        </button>
+      </div>
+    </div>
+    <div
+      class="cart-overlay"
+      id="cartOverlay"
+      onclick="toggleCart(false)"
+    ></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
